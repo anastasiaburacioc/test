@@ -73,23 +73,64 @@ section {
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
     overflow: hidden;
 }
 .test {
- background: linear-gradient(red, rgb(238, 144, 22));
- font-size: 100px;
- line-height: 1.5;
- text-align: center;
- animation: call 1s forwards 4s;
- transition: ease-out;
+    /*border: dotted 5px rgb(3, 89, 129);*/
+    border-radius: 50%;
+    background: radial-gradient(transparent, #85d7e7);
+    font-size: 100px;
+    line-height: 1.5;
+    text-align: center;
+    animation: move2 2s ease-in-out forwards 2s;
 }
-@keyframes call {
+img {
+    width: 10%;
+    height: 10%;
+}
+.test:nth-child(1),
+.test:nth-child(2),
+.test:nth-child(3),
+.test:nth-child(4),
+.test:nth-child(5),
+.test:nth-child(6),
+.test:nth-child(7),
+.test:nth-child(8),
+.test:nth-child(9),
+.test:nth-child(10),
+.test:nth-child(11),
+.test:nth-child(12),
+.test:nth-child(13),
+.test:nth-child(14),
+.test:nth-child(15),
+.test:nth-child(16),
+.test:nth-child(17),
+.test:nth-child(18),
+.test:nth-child(19),
+.test:nth-child(20) {
+    animation: move1 2s ease-in-out forwards 2s;
+}
+@keyframes move1 {
     0% {
         transform: skew(0deg,0deg);
     }
+    60% {
+        transform: skew(44deg,44deg) translateX(0%);
+    }
     100% {
-        transform: skew(44.7deg,44.7deg);
+        transform: skew(44deg,44deg) translateX(800%);
+    }
+}
+@keyframes move2 {
+    0% {
+        transform: skew(0deg,0deg);
+    }
+    60% {
+        transform: skew(44deg,44deg) translateX(0%);
+    }
+    100% {
+        transform: skew(44deg,44deg) translateX(-800%);
     }
 }
